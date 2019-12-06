@@ -1,0 +1,31 @@
+{
+  "name": "portfolio-BE",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "mongodb": "^3.3.5",
+    "node": "^13.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsoderborg7/portfolio-BE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsoderborg7/portfolio-BE/issues"
+  },
+  "homepage": "https://github.com/jsoderborg7/portfolio-BE#readme"
+}
