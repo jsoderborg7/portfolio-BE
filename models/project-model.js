@@ -1,22 +1,12 @@
 const mongoose = require('mongoose');
 
 const ProjectsSchema = new mongoose.Schema({
-  name: {
+  quote: {
     type: String,
     required: true
   },
 
-  picture: {
-    type: String,
-    required: false
-  },
-
-  description: {
-    type: String,
-    required: false
-  },
-
-  stack: {
+  author: {
     type: String,
     required: false
   }
