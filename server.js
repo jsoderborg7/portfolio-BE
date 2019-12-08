@@ -42,7 +42,7 @@ server.get('/', (req, res) =>{
 // .route('/quotes')
 // .get(this.listAllProjects);
 
-server.get('/api/quotes', (req, res) =>{
+server.get(`/api/quotes`, (req, res) =>{
   Projects.find((err, quote) =>{
     if(err){
       res.status(500).json(err)
