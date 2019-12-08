@@ -1,7 +1,7 @@
 const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const mongodb = require('mongodb');
 const dotenv = require('dotenv');
@@ -13,7 +13,7 @@ const Projects = require('./models/project-model');
 server.use(helmet());
 server.use(express.json());
 server.use(cors());
-server.use(bodyParser.json());
+// server.use(bodyParser.json());
 
 dotenv.config();
 
@@ -43,7 +43,7 @@ server.get('/', (req, res) =>{
 // .get(this.listAllProjects);
 
 server.get('/quotes', (req, res) =>{
-  Projects.find({}, (err, quote) =>{
+  Projects.find((err, quote) =>{
     if(err){
       res.status(500).json(err)
     }
