@@ -39,7 +39,7 @@ exports.listAllProjects = (req, res) =>{
 };
 
 server
-.route('/projects')
+.route('/quotes')
 .get(this.listAllProjects);
 
 module.exports = server;
