@@ -29,17 +29,26 @@ server.get('/', (req, res) =>{
   res.status(200).json({message: "We're connected!"})
 });
 
-exports.listAllProjects = (req, res) =>{
-  Projects.find({}, (err, project) =>{
-    if(err){
-      res.status(500).send(err);
-    }
-    res.status(200).json(project);
-  });
-};
+// exports.listAllProjects = (req, res) =>{
+//   Projects.find({}, (err, project) =>{
+//     if(err){
+//       res.status(500).send(err);
+//     }
+//     res.status(200).json(project);
+//   });
+// };
 
-server
-.route('/quotes')
-.get(this.listAllProjects);
+// server
+// .route('/quotes')
+// .get(this.listAllProjects);
+
+server.get('/quotes', (req, res) =>{
+  Projects.find({}, (err, quote) =>{
+    if(err){
+      res.status(500).json(err)
+    }
+    res.status(200).json(quote)
+  })
+})
 
 module.exports = server;
